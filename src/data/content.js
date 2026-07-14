@@ -36,9 +36,9 @@ export const featuredProjects = [
       "Extended Kalman Filter tracking with MOT-metric evaluation vs. ground truth",
       "Diagnosed and fixed a microsecond/second timestamp mismatch in LiDAR frame matching",
     ],
-    stack: ["Python", "PyTorch", "PointPillars", "EKF", "DBSCAN", "Hungarian Algorithm"],
-    github: "https://github.com/OmarEmadAldin",
-    image: null,
+    stack: ["Python", "PyTorch", "PointPillars", "EKF", "Linear Kalman", "DBSCAN", "Hungarian Algorithm"],
+    github: "https://github.com/OmarEmadAldin/End_to_End_perception_pipeline_with_3d_detection_tracking",
+    image: "/projects/3d_obj_tracking.gif",
   },
   {
     title: "LiDAR Obstacle Detection Pipeline",
@@ -50,9 +50,9 @@ export const featuredProjects = [
       "KD-Tree Euclidean clustering + PCA-based oriented bounding boxes",
       "Renders interactively or to PNG sequences for video/GIF export",
     ],
-    stack: ["C++17", "PCL", "RANSAC", "KD-Tree", "PCA"],
-    github: "https://github.com/OmarEmadAldin",
-    image: null,
+    stack: ["C++17", "PCL", "Voxel Grid", "RANSAC", "KD-Tree", "PCA"],
+    github: "https://github.com/OmarEmadAldin/LiDAR_Obstacle_DetectionPipeline",
+    image: "/projects/LiDAR_Obstacle_DetectionPipeline.gif",
   },
   {
     title: "LiDAR–Camera Geometric Fusion",
@@ -63,9 +63,9 @@ export const featuredProjects = [
       "Pure rigid-body geometric fusion: rotation + translation + perspective projection",
       "Per-object point cropping from 2D detections onto the 3D point cloud",
     ],
-    stack: ["Python", "OpenCV", "NumPy", "Sensor Calibration"],
-    github: "https://github.com/OmarEmadAldin",
-    image: null,
+    stack: ["Python", "OpenCV", "NumPy", "Sensor Calibration", "KITTI dataset"],
+    github: "https://github.com/OmarEmadAldin/Geometric-Fusion",
+    image: "/projects/Geometric-Fusion.png",
   },
   {
     title: "SORT — From Scratch",
@@ -76,87 +76,108 @@ export const featuredProjects = [
       "Hand-built Kalman filter motion model, no tracking library used",
       "Hungarian algorithm IoU-cost data association",
     ],
-    stack: ["Python", "Kalman Filter", "Hungarian Algorithm"],
-    github: "https://github.com/OmarEmadAldin",
-    image: null,
+    stack: ["Python", "Kalman Filter", "Hungarian Algorithm", "MOT17"],
+    github: "https://github.com/OmarEmadAldin/SORT_Implementation_from_scratch_with_Benchmarking",
+    image: "/projects/SORT_Implementation_from_scratch_with_Benchmarking.gif",
   },
 ]
 
 // Secondary = smaller supporting projects, shown as a compact grid.
+// Add an `image` field (e.g. "/projects/traffic-inspector.png") to show a
+// small thumbnail on the card. Leave it as null to render without one.
+// IMPORTANT: paths must start with "/projects/..." — do NOT include "public"
+// in the path (that folder is served from the site root automatically).
 export const secondaryProjects = [
   {
     title: "MOT DeepSORT — CARLA Sim",
     description: "YOLOv8 detection + DeepSORT (Hungarian + Kalman + ReID) tracking, speed estimation, and trajectory drawing in CARLA.",
     stack: ["YOLOv8", "DeepSORT", "CARLA"],
-    github: "https://github.com/OmarEmadAldin",
+    github: "https://github.com/OmarEmadAldin/MOT_DeepSort_CARLA_Sim",
+    image: "/projects/MOT_DeepSort_CARLA_Sim.gif",
   },
   {
     title: "Time-to-Collision & AEB — CARLA Sim",
     description: "Pedestrian detection + depth-based TTC estimation triggering Autonomous Emergency Braking, mirroring Euro NCAP AEB test structure.",
     stack: ["YOLOv8", "CARLA", "AEB"],
-    github: "https://github.com/OmarEmadAldin",
+    github: "https://github.com/OmarEmadAldin/TimeToCollision_CARLA_SIM",
+    image: "/projects/TTC.gif",
   },
   {
     title: "Object Detector Comparison",
     description: "Synchronized benchmarking of 6 pretrained COCO detectors: SSD MobileNet, YOLOv5, YOLOv8, Faster R-CNN, DETR, RF-DETR.",
     stack: ["PyTorch", "COCO", "Benchmarking"],
-    github: "https://github.com/OmarEmadAldin",
+    github: "https://github.com/OmarEmadAldin/Object_Detection_Models_Comparison",
+    image: "/projects/Object_Detection_Models_Comparison.jpeg",
   },
   {
     title: "Optical Flow Comparison",
     description: "Lucas-Kanade, Horn-Schunck, and RAFT run side-by-side on the same video, compared on runtime, flow magnitude, and coverage.",
     stack: ["OpenCV", "RAFT"],
-    github: "https://github.com/OmarEmadAldin",
+    github: "https://github.com/OmarEmadAldin/Optical_Flow_Comparison",
+    image: "/projects/output_horizontal.gif",
   },
   {
     title: "BEV via Inverse Perspective Mapping",
     description: "Transforms perspective-distorted 2D images into a top-down Bird's-Eye View for metric ground-distance measurement.",
     stack: ["OpenCV", "IPM"],
-    github: "https://github.com/OmarEmadAldin",
+    github: "https://github.com/OmarEmadAldin/BEV-with-Inverse-Perspective-Mapping-IPM",
+    image: "/projects/BEV_with_IPM.gif",
   },
   {
     title: "Monocular Depth Comparison",
     description: "Comparative pipeline for MiDaS v3.1, Monodepth2, and ZoeDepth on the same video/webcam stream.",
     stack: ["MiDaS", "ZoeDepth", "Monodepth2"],
-    github: "https://github.com/OmarEmadAldin",
+    github: "https://github.com/OmarEmadAldin/Mono_Depth_Estimation",
+    image: "/projects/mono_depth_comp.gif",
   },
   {
-    title: "Traffic Inspector",
-    description: "Real-time vehicle detection and tracking with a REST/WebSocket API for image and video inference.",
-    stack: ["YOLO", "ByteTrack", "FastAPI"],
-    github: "https://github.com/OmarEmadAldin",
+    title: "Traffic Lights & Signs Detection",
+    description: "Real-time vehicle traffic light detection and traffic sign detection in CARLA.",
+    stack: ["YOLO", "Python", "CARLA"],
+    github: "https://github.com/OmarEmadAldin/Traffic_Sign_det_CARLA",
+    image: "/projects/Traffic_lights_signs_det.gif",
   },
   {
     title: "Football Analysis System",
     description: "Player/ball detection and tracking, K-Means jersey clustering for team ID, and optical-flow-based motion analytics.",
     stack: ["YOLOv8", "Supervision", "K-Means"],
-    github: "https://github.com/OmarEmadAldin",
+    github: "https://github.com/OmarEmadAldin/Football_Analysis_CV",
+    image: "/projects/footballAnalysis.gif",
+  },
+  {
+    title: "Machine Learning Algorithms From Scratch",
+    description: "This repo contains ML algorithms from scratch Linear Regression ,Logistic Regression ,KNN ,KMeans ,preceptron ,SVM ,Decision Tree,Random Forest ,Naive Bayes, PCA",
+    stack: ["NumPy", "Matplotlib"],
+    github: "https://github.com/OmarEmadAldin/Machine-Learning-Algorithms-From-Scratch",
+    image: "public/projects/ml_algorithms_grid.gif",
   },
 ]
 
 export const experience = [
   {
-    role: "Computer Vision Engineer",
-    org: "Brilliant Technologies",
-    period: "June 2024 — Present",
+    role: "Graduation Project — Grade A+",
+    org: "ASU ROAR Racing Team",
+    period: "2023 — 2024",
+    bullets: [
+      
+      "Built a stereo vision system using two mono-camera from scratch to get depth-map and then used it for 6D pose estimation using YOLOv5 and Mask R-CNN. Then We applied Inverse Kinematics to achieve Vision-Based Control",
+      "Designed and manufactured two cycloidal gear drives for a 6-DOF robotic manipulator. from the prototype phase tell the final manufactured gearbox.",
+    ],
+  },
+
+  {
+    role: "Mechatronics Engineer",
+    org: "OFOQ Robotics",
+    period: "June 2024 — August 2025",
     bullets: [
       "Perception engineer on a delivery robot: human & dynamic obstacle detection with MobileNet-SSD, deployed on Jetson Nano.",
-      "Human following: detection + ByteTrack for stable boxes, pure pursuit (lateral) + PID (longitudinal) control on a Kinect camera.",
+      "Human following: detection + ByteTrack for stable boxes, pure pursuit (lateral) + PID (longitudinal) control from IntelRealsense camera feedback.",
       "Face detection & tracking with YOLO-face and PID-based servo control.",
       "Pose detection with background subtraction for interactive robot applications.",
-      "National ID data extractor: custom-trained YOLOv8 for label detection, Tesseract OCR, DOCX export to server.",
+      "National ID data extractor: An software product mainly introduced to lesses the time of the data extraction from the national ID card Through Pipeline consists of a combination beetween the classical image processing techniques and cutting-edge technologies",
     ],
   },
-  {
-    role: "Computer Vision — Photo Booth Project",
-    org: "EMS",
-    period: "September 2025",
-    bullets: [
-      "Deployed MODNet on GPU via CUDA for real-time background subtraction.",
-      "Deployed an image harmonizer on MODNet's output mask against a new background.",
-      "Chained both models sequentially via subprocess on a mini PC.",
-    ],
-  },
+  
   {
     role: "Computer Vision — Gesture Motion Control",
     org: "Elyarmook",
@@ -166,17 +187,7 @@ export const experience = [
       "Raspberry Pi ↔ ESP32 communication with multithreading.",
     ],
   },
-  {
-    role: "Graduation Project — Grade A+",
-    org: "ASU ROAR Racing Team",
-    period: "2023 — 2024",
-    bullets: [
-      "Designed and manufactured two cycloidal gear drives for a 6-DOF robotic manipulator.",
-      "Built a stereo vision depth-perception system using YOLOv5 and Mask R-CNN.",
-      "Integrated stereo vision with inverse kinematics to reach 3D goal points.",
-      "Competed at the European Rover Challenge (ERC 2024).",
-    ],
-  },
+  
 ]
 
 export const internships = [
@@ -185,7 +196,7 @@ export const internships = [
     org: "ASU Autotronics Research Lab (ARL)",
     period: "Aug 2023 — Oct 2023",
     bullets: [
-      "Autonomous stack on ROS2.",
+      "Autonomous stack on ROS2",
       "Control: kinematic bicycle model, PID, Pure Pursuit, Adaptive Pure Pursuit, Stanley, LQR, MPC.",
     ],
   },
@@ -195,7 +206,7 @@ export const internships = [
     period: "June 2023 — Oct 2023",
     bullets: [
       "Captured motion data with QTM (Qualisys Track Manager) and preprocessed it.",
-      "Used PAF, ASCII scripting, and Visual3D for biomechanical modeling.",
+      "Used PAF, ASCII scripting, and Visual3D for biomechanical modeling Which is file automation method",
     ],
   },
 ]
@@ -208,26 +219,17 @@ export const education = {
 }
 
 export const skills = {
-  Languages: ["Python", "C++17", "C", "SQL"],
+  Languages: ["Python", "C++17", "C"],
   "Perception & ML": ["PyTorch", "TensorFlow", "Keras", "scikit-learn", "OpenCV", "PCL"],
-  "Sensors & Fusion": ["LiDAR", "Camera", "Radar", "Stereo Vision", "Sensor Calibration", "Kalman/EKF"],
-  Robotics: ["ROS", "ROS2", "Jetson Nano", "Raspberry Pi", "AVR", "ARM"],
-  Deployment: ["CUDA", "Docker", "Flask", "FastAPI", "Git/GitHub", "Linux"],
+  Robotics: ["ROS", "ROS2", "Jetson Nano/Xavier", "Raspberry Pi", "AVR-ESP"],
+  Deployment: ["CUDA", "Docker", "FastAPI", "Git/GitHub", "Linux - Ubuntu"],
 }
 
-export const certifications = [
-  "Udacity — Sensor Fusion Nanodegree",
-  "IBM Skills Network — Intro to Computer Vision & Image Processing",
-  "Sprints — AI & Machine Learning Course",
-  "Sprints — Programming with Python",
-  "SHAI for AI — Intro to Machine Learning Workshop",
-  "Embedded Systems Diploma — AVR, RTOS fundamentals",
-  "ITI — Introduction to Computer Vision Workshop",
-  "Coursera — Intro to Self-Driving Cars",
-]
+// Optional — leave as an empty array to hide the Certifications column,
+// or add entries back in the same format as before (array of strings).
+export const certifications = []
 
 export const awards = [
   "1st Position — GP Act (Swift Act Competition for Graduation Projects)",
-  "2nd Position — IHUB Competition for Robotics",
   "Competitor — European Rover Challenge (ERC 2024)",
 ]
