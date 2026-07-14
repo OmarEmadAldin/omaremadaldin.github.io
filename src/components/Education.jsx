@@ -15,17 +15,19 @@ export default function Education() {
           <p className="font-mono text-xs text-far mt-2">{education.period} · {education.location}</p>
         </div>
 
-        <div>
-          <p className="font-mono text-xs uppercase tracking-widest text-muted mb-4">Certifications</p>
-          <ul className="space-y-2">
-            {certifications.map((c) => (
-              <li key={c} className="text-sm text-ink/85 flex gap-2">
-                <span className="text-near mt-0.5">›</span>
-                <span>{c}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {certifications && certifications.length > 0 && (
+          <div>
+            <p className="font-mono text-xs uppercase tracking-widest text-muted mb-4">Certifications</p>
+            <ul className="space-y-2">
+              {certifications.map((c) => (
+                <li key={c} className="text-sm text-ink/85 flex gap-2">
+                  <span className="text-near mt-0.5">›</span>
+                  <span>{c}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-muted mb-4">Awards</p>
