@@ -11,32 +11,19 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const initials = profile.name
-    .split(' ')
-    .map(w => w[0])
-    .slice(0, 2)
-    .join('')
+  const initials = profile.name.split(' ').map(w => w[0]).slice(0, 2).join('')
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-baseLight/90 dark:bg-base/90 backdrop-blur border-b border-line'
-          : 'bg-transparent'
+      className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
+        scrolled ? 'bg-base/90 backdrop-blur border-b border-line' : 'bg-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-
-        {/* Logo */}
-        <a
-          href="#hero"
-          className="font-display font-semibold text-lg tracking-tight text-inkLight dark:text-ink"
-        >
-          {initials}
-          <span className="text-near">.</span>
+        <a href="#hero" className="font-display font-semibold text-lg tracking-tight text-ink">
+          {initials}<span className="text-near">.</span>
         </a>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {nav.map((item) => (
             <a
@@ -49,32 +36,17 @@ export default function Nav() {
           ))}
         </nav>
 
-        {/* Right Controls */}
-        <div className="flex items-center gap-3">
-
-          {/* 🌗 Theme Toggle */}
-          <button
-            id="theme-toggle"
-            aria-label="Toggle theme"
-            className="text-sm border border-line rounded px-3 py-1.5 transition-all duration-300 hover:scale-105 active:scale-95 text-inkLight dark:text-ink"
-          >
-            🌗
-          </button>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-inkLight dark:text-ink font-mono text-xs border border-line rounded px-3 py-1.5"
-            onClick={() => setOpen(!open)}
-            aria-label="Toggle menu"
-          >
-            {open ? 'Close' : 'Menu'}
-          </button>
-        </div>
+        <button
+          className="md:hidden text-ink font-mono text-xs border border-line rounded px-3 py-1.5"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+        >
+          {open ? 'Close' : 'Menu'}
+        </button>
       </div>
 
-      {/* Mobile Menu */}
       {open && (
-        <nav className="md:hidden bg-baseLight dark:bg-base border-t border-line px-6 py-4 flex flex-col gap-4">
+        <nav className="md:hidden bg-base border-t border-line px-6 py-4 flex flex-col gap-4">
           {nav.map((item) => (
             <a
               key={item.href}
