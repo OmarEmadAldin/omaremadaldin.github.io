@@ -52,7 +52,7 @@ export const featuredProjects = [
     ],
     stack: ["C++17", "PCL", "Voxel Grid", "RANSAC", "KD-Tree", "PCA"],
     github: "https://github.com/OmarEmadAldin/LiDAR_Obstacle_DetectionPipeline",
-    image: "/public/projects/LiDAR_Obstacle_DetectionPipeline.gif",
+    image: "./public/projects/LiDAR_Obstacle_DetectionPipeline.gif",
   },
   {
     title: "LiDAR–Camera Geometric Fusion",
