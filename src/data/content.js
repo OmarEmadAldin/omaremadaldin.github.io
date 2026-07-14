@@ -149,7 +149,7 @@ export const secondaryProjects = [
     description: "This repo contains ML algorithms from scratch Linear Regression ,Logistic Regression ,KNN ,KMeans ,preceptron ,SVM ,Decision Tree,Random Forest ,Naive Bayes, PCA",
     stack: ["NumPy", "Matplotlib"],
     github: "https://github.com/OmarEmadAldin/Machine-Learning-Algorithms-From-Scratch",
-    image: "public/projects/ml_algorithms_grid.gif",
+    image: "/projects/ml_algorithms_grid.gif",
   },
 ]
 
