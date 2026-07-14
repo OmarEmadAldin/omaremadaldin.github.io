@@ -38,7 +38,7 @@ export const featuredProjects = [
     ],
     stack: ["Python", "PyTorch", "PointPillars", "EKF", "Linear Kalman", "DBSCAN", "Hungarian Algorithm"],
     github: "https://github.com/OmarEmadAldin/End_to_End_perception_pipeline_with_3d_detection_tracking",
-    image: "portfolio/public/projects/3d_obj_tracking.gif",
+    image: "https://github.com/OmarEmadAldin/omaremadaldin.github.io/blob/main/public/projects/3d_obj_tracking.gif",
   },
   {
     title: "LiDAR Obstacle Detection Pipeline",
