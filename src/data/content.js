@@ -231,5 +231,5 @@ export const certifications = []
 
 export const awards = [
   "1st Position — GP Act (Swift Act Competition for Graduation Projects)",
-  "Competitor — European Rover Challenge (ERC 2024)",
+  "5th rank at European Rover Challenge (ERC 2024)",
 ]
