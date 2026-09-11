@@ -88,6 +88,29 @@ export const featuredProjects = [
 // IMPORTANT: paths must start with "/projects/..." — do NOT include "public"
 // in the path (that folder is served from the site root automatically).
 export const secondaryProjects = [
+      {
+    title: "Fine-Tuning LLaVA-OneVision-0.5B on MAPLM v1.5 (LoRA)",
+    description: "Parameter-efficient LoRA fine-tuning of a 0.5B vision-language model for structured driving/map visual-QA — lane markings, road conditions, scene attributes — on consumer-grade hardware.",
+    stack: ["LLaVA-OneVision", "LoRA", "Qwen2", "MAPLM"],
+    github: "https://github.com/OmarEmadAldin/FineTuning-LLaVA-OneVision-0.5B-on-dataset-25-of-MAPLM_v1_5-using-LORA",
+    image: "/projects/Fine_Tuning_LORA_Res.gif",
+  },
+  
+  {
+    title: "CLIP-Based Zero-Shot Driving-Scene Tagger",
+    description: "Zero-shot tagging of weather, road type, traffic density, and hazard presence from driving frames — no labeled training data, just CLIP image/text embeddings and cosine similarity, scored against BDD100K.",
+    stack: ["CLIP", "Python", "BDD100K", "Zero-Shot"],
+    github: "https://github.com/OmarEmadAldin/CLIP_driving_tagger",
+    image: "/projects/CLIP_portfolio_sample.gif",
+  },
+
+  {
+    title: "Driving-Scene BLIP Captioner",
+    description: "BLIP-2 image captioning over driving-scene frames with side-by-side image/caption visualization — a first step toward pairing captions with vehicle state for VLA-style pipelines.",
+    stack: ["BLIP-2", "PyTorch", "BDD100K"],
+    github: "https://github.com/OmarEmadAldin/Driving_Scene_Captioner_and_Visual",
+    image: "/projects/BLIP_gif_5.gif",
+  },
   {
     title: "MOT DeepSORT — CARLA Sim",
     description: "YOLOv8 detection + DeepSORT (Hungarian + Kalman + ReID) tracking, speed estimation, and trajectory drawing in CARLA.",
